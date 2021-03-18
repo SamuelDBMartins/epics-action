@@ -45,13 +45,7 @@ async function updateEpic({ octokit, epic }) {
   const matchesAllDone = Array.from(epicBody.matchAll(patternAllDone));
   const matchesAllDoneCount = matchesAllDone.length;
 
-  if (autoCloseEpic==='true'
-    && matchCount
-    && matchesAllCount
-    && matchesAllDoneCount === matchesAllCount
-  ) {
-    epicState = 'closed';
-  }
+
 
   const result = await octokit.issues.update({
     owner: github.context.repo.owner,
