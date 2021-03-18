@@ -51,8 +51,7 @@ async function updateEpic({ octokit, epic }) {
     owner: github.context.repo.owner,
     repo: github.context.repo.repo,
     issue_number: epicNumber,
-    body: epicBody,
-    state: epicState,
+    body: epicBody
   });
 
   return result;
