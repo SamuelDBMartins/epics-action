@@ -45,7 +45,7 @@ async function updateEpic({ octokit, epic }) {
   const matchesAllDone = Array.from(epicBody.matchAll(patternAllDone));
   const matchesAllDoneCount = matchesAllDone.length;
 
-  if (!!autoCloseEpic
+  if (autoCloseEpic==='true'
     && matchCount
     && matchesAllCount
     && matchesAllDoneCount === matchesAllCount
